@@ -19,7 +19,8 @@ function ScrambleGame() {
   const [feedBack, setFeedBack] = useState('');
 
   useEffect(() => {
-    const word = wordList[Math.floor(Math.random() * wordList.length)];
+    const currentwordIndex = Math.floor(Math.random() * wordList.length)
+    const word = wordList[currentwordIndex];
     setCorrectWord(word);
     setShuffledWord(shuffleWord(word));
   }, []);
@@ -40,13 +41,13 @@ function ScrambleGame() {
   return (
     <main className='scramble'>
       <h1>Scramble Game</h1>
-      <h3>{ feedBack}</h3>
       <section className='scramble-content'>
         <div className='content-header'>
           <p>Hint:</p>
           <p>Time:</p>
         </div>
         <h4>Scrambled Word: {shuffledWord}</h4>
+      <h5>{ feedBack}</h5>
         <div className='content-input'>
           <input
             type='text'
