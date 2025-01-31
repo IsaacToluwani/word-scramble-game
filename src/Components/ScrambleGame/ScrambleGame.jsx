@@ -14,10 +14,15 @@ function ScrambleGame() {
 
   // State Management
   const [shuffledWord, setShuffledWord] = useState(shuffleWord(wordList[0]));
+  const [userInput, setUserInput] = useState('');
 
   useEffect(() => {
     setShuffledWord(shuffleWord(wordList[0]));
   }, []);
+
+  const handleUserInput = (event) => {
+    return setUserInput(event.target.value);
+  };
 
   return (
     <main className='scramble'>
@@ -29,7 +34,12 @@ function ScrambleGame() {
         </div>
         <h4>Scrambled Word: {shuffledWord}</h4>
         <div className='content-input'>
-          <input type='text' placeholder='Your Guess' />
+          <input
+            type='text'
+            placeholder='Your Guess'
+            value={userInput}
+            onChange={handleUserInput}
+          />
           <button>Enter </button>
         </div>
         <div className='content-buttons'>
