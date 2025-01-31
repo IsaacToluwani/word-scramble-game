@@ -19,3 +19,19 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.content-header {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  /* margin-top: 20px; */
+}
+
+.content-buttons {
+display: flex;
+justify-content: center;
+gap: 30px;
+margin-top: 20px;
+}
+
+

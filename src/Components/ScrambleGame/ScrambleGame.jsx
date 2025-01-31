@@ -1,6 +1,8 @@
 import React from 'react';
 import './ScrambleGame.css';
 
+const wordList = ['grazac', 'abeokuta', 'java', 'ogun', 'css']
+
 function ScrambleGame() {
   return (
     <main className='scramble'>
@@ -14,7 +16,10 @@ function ScrambleGame() {
           <input type='text' />
           <button>Enter </button>
         </div>
-        
+        <div className="content-buttons">
+          <button>Hint</button>
+          <button>Skip</button>
+        </div>
       </section>
     </main>
   );
