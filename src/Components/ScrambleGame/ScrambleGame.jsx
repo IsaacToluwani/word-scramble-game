@@ -1,9 +1,14 @@
 import React from 'react';
 import './ScrambleGame.css';
 
-const wordList = ['grazac', 'abeokuta', 'java', 'ogun', 'css']
+const wordList = ['grazac', 'abeokuta', 'java', 'ogun', 'css'];
 
 function ScrambleGame() {
+  const shuffleWord = (word) => {
+    return word.split('').sort(() => Math.random() - 0.5).join('');
+  };
+  console.log('shuffle', shuffleWord(wordList[0]));
+
   return (
     <main className='scramble'>
       <h1>Scramble Game</h1>
@@ -16,7 +21,7 @@ function ScrambleGame() {
           <input type='text' />
           <button>Enter </button>
         </div>
-        <div className="content-buttons">
+        <div className='content-buttons'>
           <button>Hint</button>
           <button>Skip</button>
         </div>
