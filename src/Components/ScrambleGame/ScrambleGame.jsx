@@ -13,9 +13,10 @@ function ScrambleGame() {
   // console.log('shuffle', shuffleWord(word));
 
   // State Management
-  const [shuffledWord, setShuffledWord] = useState(shuffleWord(wordList[0]));
+  const [shuffledWord, setShuffledWord] = useState(shuffleWord(''));
   const [userInput, setUserInput] = useState('');
   const [correctWord, setCorrectWord] = useState('');
+  const [feedBack, setFeedBack] = useState('');
 
   useEffect(() => {
     const word = wordList[Math.floor(Math.random() * wordList.length)];
@@ -30,15 +31,16 @@ function ScrambleGame() {
   const handleSubmit = () => {
     // if user input === correct word display correct answer, els
 
-    if (userInput === correctWord) {
-      <h1>Correct Guess</h1>;
+    if (userInput.toLowerCase() === correctWord.toLowerCase()) {
+      setFeedBack('Awesome Job');
     } else {
-      <h1>Wrong Guess</h1>;
+      setFeedBack('Wrong Guess');
     }
   };
   return (
     <main className='scramble'>
       <h1>Scramble Game</h1>
+      <h3>{ feedBack}</h3>
       <section className='scramble-content'>
         <div className='content-header'>
           <p>Hint:</p>
