@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './ScrambleGame.css';
 
 const wordList = ['grazac', 'abeokuta', 'java', 'ogun', 'css'];
 
 function ScrambleGame() {
   const shuffleWord = (word) => {
-    return word.split('').sort(() => Math.random() - 0.5).join('');
+    return word
+      .split('')
+      .sort(() => Math.random() - 0.5)
+      .join('');
   };
   console.log('shuffle', shuffleWord(wordList[0]));
+
+  // State Management
+  const [shuffledWord, setShuffledWord] = useState(shuffleWord(wordList[0]));
+
+  useEffect(() => {
+    setShuffledWord(shuffleWord(wordList[0]));
+  }, []);
 
   return (
     <main className='scramble'>
@@ -17,8 +27,9 @@ function ScrambleGame() {
           <p>Hint:</p>
           <p>Time:</p>
         </div>
+        <h4>Scrambled Word: {shuffledWord}</h4>
         <div className='content-input'>
-          <input type='text' />
+          <input type='text' placeholder='Your Guess' />
           <button>Enter </button>
         </div>
         <div className='content-buttons'>
