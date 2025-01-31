@@ -5,7 +5,10 @@ const wordList = ['grazac', 'abeokuta', 'java', 'ogun', 'css'];
 
 function ScrambleGame() {
   const shuffleWord = (word) => {
-    return word.split('').sort(() => Math.random() - 0.5).join('');
+    return word
+      .split('')
+      .sort(() => Math.random() - 0.5)
+      .join('');
   };
   // console.log('shuffle', shuffleWord(word));
 
@@ -22,7 +25,7 @@ function ScrambleGame() {
     setCorrectWord(word);
     setShuffledWord(shuffleWord(word));
     setWordIndex(currentwordIndex);
-    console.log("word index:" ,currentwordIndex);
+    console.log('word index:', currentwordIndex);
   }, []);
   console.log('correctWord', shuffledWord, correctWord);
 
@@ -39,6 +42,7 @@ function ScrambleGame() {
         setWordIndex(nextWordIndex);
         setShuffledWord(shuffleWord(wordList[nextWordIndex]));
         setCorrectWord(wordList[nextWordIndex]);
+        setUserInput('');
       }
     } else {
       setFeedBack('Wrong Guess');
