@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/word-scramble-game/static/css/main.a82d4e48.css",
-    "main.js": "/word-scramble-game/static/js/main.190fe6a4.js",
+    "main.css": "/word-scramble-game/static/css/main.55270da1.css",
+    "main.js": "/word-scramble-game/static/js/main.66267e56.js",
     "static/js/488.94d73946.chunk.js": "/word-scramble-game/static/js/488.94d73946.chunk.js",
     "static/media/logo.svg": "/word-scramble-game/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/word-scramble-game/index.html",
-    "main.a82d4e48.css.map": "/word-scramble-game/static/css/main.a82d4e48.css.map",
-    "main.190fe6a4.js.map": "/word-scramble-game/static/js/main.190fe6a4.js.map",
+    "main.55270da1.css.map": "/word-scramble-game/static/css/main.55270da1.css.map",
+    "main.66267e56.js.map": "/word-scramble-game/static/js/main.66267e56.js.map",
     "488.94d73946.chunk.js.map": "/word-scramble-game/static/js/488.94d73946.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a82d4e48.css",
-    "static/js/main.190fe6a4.js"
+    "static/css/main.55270da1.css",
+    "static/js/main.66267e56.js"
   ]
 }
