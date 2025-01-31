@@ -3,7 +3,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Features
-
+* Random Word Scrambling: Each word is shuffled uniquely.
+* User Input Validation: Case-insensitive input handling.
 
 
 ## How to Play
