@@ -42,4 +42,43 @@ gap: 30px;
 margin-top: 20px;
 }
 
+/* Media query for tablets */
+@media (max-width: 768px) {
+  .scramble {
+    width: 90vw;
+    height: 100vh;
+  }
+
+  .scramble h1 {
+    font-size: 2rem;
+  }
+
+  .content-input input {
+    width: 80%;
+  }
+
+  .content-input button {
+    width: 80%;
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  .scramble {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .scramble h1 {
+    font-size: 1.5rem;
+  }
+
+  .content-input input {
+    width: 90%;
+  }
+
+  .content-input button {
+    width: 90%;
+  }
+}
 
