@@ -1,7 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import './ScrambleGame.css';
 
-const wordList = ['grazac', 'abeokuta', 'java', 'ogun', 'css'];
+const wordList = [
+  'grazac',
+  'abeokuta',
+  'java',
+  'ogun',
+  'css',
+  'june',
+  'rag',
+  'rake',
+  'give',
+];
 
 function ScrambleGame() {
   const shuffleWord = (word) => {
@@ -48,6 +58,16 @@ function ScrambleGame() {
       setFeedBack('Wrong Guess');
     }
   };
+
+  const handleSkip = () => {
+    if (wordIndex + 1 < wordList.length) {
+      const nextWordIndex = wordIndex + 1;
+      setWordIndex(nextWordIndex);
+      setShuffledWord(shuffleWord(wordList[nextWordIndex]));
+      setCorrectWord(wordList[nextWordIndex]);
+      setUserInput('');
+    }
+  };
   return (
     <main className='scramble'>
       <h1>Scramble Game</h1>
@@ -69,7 +89,7 @@ function ScrambleGame() {
         </div>
         <div className='content-buttons'>
           <button>Hint</button>
-          <button>Skip</button>
+          <button onClick={handleSkip}>Skip</button>
         </div>
       </section>
     </main>
